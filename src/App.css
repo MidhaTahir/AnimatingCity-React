@@ -1,38 +1,46 @@
-.App {
+.App{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+body{
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.background{
+  background: url("./images/back.jpg");
+  background-size: contain;
+  background-repeat: repeat-x;
+  height: 100vh;
+  /* animation: animate 15s linear infinite; */
+}
+
+/* @keyframes animate{
+  from{
+      background-position: 1000% 0;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  to{
+      background-position: 0 0;
   }
-  to {
-    transform: rotate(360deg);
-  }
+} */
+
+.container{
+  position : absolute;
+  bottom: -10px;
+  left: 500px;
 }
+
+@keyframes guybrushWalk{
+  0% { background-position : 0 0;}
+  100% {background-position : -612px 0;}
+}
+.guybrush{
+  background: url(http://atomicrobotdesign.com/blog_media/css-sprite/walk-right.png) 0 0 repeat-x;
+  width : 100px;
+  height : 148px;
+  /* steps(6) as we have 6 frames */
+  animation : guybrushWalk 1s steps(6) infinite;
+}
+
+
